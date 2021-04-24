@@ -8,94 +8,61 @@
 </head>
 
 <body>
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top" >
-            <div class="container-fluid"> 
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">WebSiteName</a>
-                  </div>
-              <ul class="nav navbar-nav navbar-right" >
-                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-              </ul>
-            </div>
-          </nav>
-        <div class="container">
-            <div class="row"style="padding-top: 10rem;">
-                <h2 class="text-center"><strong>Search something</strong></h2>
-            </div>
-            <div class="row" style="padding-top: 4rem;">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button">
-                                <span class="glyphicon glyphicon-search"></span>Go
-                            </button>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-        </div>
-        <div class="row"style="padding-top: 4rem;">
-            <h3 class="text-center"><strong>Searching result</strong></h3>
-        </div>
-        <div class="container-fluid" style="padding-top: 3rem;">
-            <div class="meal-wrapper">
-                <div id="ongrid">
-                    
-                        <div class="card block" style="width: 100%;"> 
-                            <img src="image/pic1.jpg" class="card-img-top imageborder" alt="..." style="width: 100%;">
-                            <div class="card-body" style="padding-bottom: 2rem;">
-                              <h2 class="card-title">Card title</h2>
-                              <a href="#" class="btn btn-primary btn_border" data-toggle="modal" data-target="#DesModal">Go somewhere <br></a>
-                            </div>
-                        </div>
-                        <div class="card block" style="width: 100%;"> 
-                            <img src="image/pic1.jpg" class="card-img-top imageborder" alt="..." style="width: 100%;">
-                            <div class="card-body" style="padding-bottom: 2rem;">
-                              <h2 class="card-title">Card title</h2>
-                              <a href="#" class="btn btn-primary btn_border" data-toggle="modal" data-target="#DesModal">Go somewhere <br></a>
-                            </div>
-                        </div>
-                        <div class="card block" style="width: 100%;"> 
-                            <img src="image/pic1.jpg" class="card-img-top imageborder" alt="..." style="width: 100%;">
-                            <div class="card-body" style="padding-bottom: 2rem;">
-                              <h2 class="card-title">Card title</h2>
-                              <a href="#" class="btn btn-primary btn_border" data-toggle="modal" data-target="#DesModal">Go somewhere <br></a>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <div id="DesModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-          
-              <!-- Modal content-->
-              <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <div class="modal-header">
-                  
-                  <h2 class="modal-title text-center"><strong>Bubble & Squeak</strong></h2>
-                  <br>
-                  <h4 class="text-center"><kbd>Pork</kbd></h4>
-                </div>
-                <div class="modal-body">
-                  <h3 class="text-center"><Strong>Instructions:</Strong></h3>
-                  <br>
-                  <h4 class="text-center">
-                    Melt the fat in a non-stick pan, allow it to get nice and hot, then add the bacon. As it begins to brown, add the onion and garlic. Next, add the sliced sprouts or cabbage and let it colour slightly. All this will take 5-6 mins. Next, add the potato. Work everything together in the pan and push it down so that the mixture covers the base of the pan – allow the mixture to catch slightly on the base of the pan before turning it over and doing the same again. It’s the bits of potato that catch in the pan that define the term ‘bubble and squeak’, so be brave and let the mixture colour. Cut into wedges and serve.
-                  </h4>
-                </div>
-                <div class="modal-footer">
-                    <h1 class="text-center"><strong><a href="#">Watch Video</a></strong></h1>
-                </div>
-              </div>
-          
-            </div>
+      <div class="row" style="padding-top: 10rem;">
+        <h2 class="text-center"><strong>Search something</strong></h2>
+      </div>
+      <div class="row" style="padding-top: 4rem;">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" id="search-input">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button" id="btn-search">
+                <span class="glyphicon glyphicon-search"></span>Go
+              </button>
+            </span>
           </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 4rem;">
+      <h3 class="text-center"><strong>Searching result</strong></h3>
+    </div>
+    <div id="meal">
+
+    </div>
+    <div class="container-fluid" style="padding-top: 3rem;">
+      <div class="meal-wrapper">
+        <div id="ongrid">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="DesModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-header">
+
+        </div>
+      </div>
+    <script src="js/script.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
